@@ -165,7 +165,9 @@ class AppStateTest {
         assertEquals("MiniMax M2.7", models[1].displayName)
         assertEquals("minimax", models[1].providerId)
         assertEquals("MiniMax-M2.7", models[1].modelId)
-        assertEquals("Opus 4.6", models[3].displayName)
+        assertEquals("Opus 4.6", models[2].displayName)
+        assertEquals("anthropic", models[2].providerId)
+        assertEquals("Sonnet 4.6", models[3].displayName)
         assertEquals("anthropic", models[3].providerId)
     }
 
