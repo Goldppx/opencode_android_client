@@ -162,8 +162,11 @@ class AppStateTest {
         assertEquals("GLM-5.1", models[0].displayName)
         assertEquals("zai-coding-plan", models[0].providerId)
         assertEquals("glm-5.1", models[0].modelId)
-        assertEquals("Opus 4.6", models[1].displayName)
-        assertEquals("anthropic", models[1].providerId)
+        assertEquals("MiniMax M2.7", models[1].displayName)
+        assertEquals("minimax", models[1].providerId)
+        assertEquals("MiniMax-M2.7", models[1].modelId)
+        assertEquals("Opus 4.6", models[3].displayName)
+        assertEquals("anthropic", models[3].providerId)
     }
 
     @Test

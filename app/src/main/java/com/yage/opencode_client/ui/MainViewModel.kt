@@ -70,6 +70,7 @@ data class AppState(
                 "Gemini" in displayName -> "Gemini"
                 "GPT" in displayName -> "GPT"
                 "Grok" in displayName -> "Grok"
+                "MiniMax" in displayName -> "MiniMax"
                 else -> displayName.split(" ").firstOrNull() ?: displayName
             }
     }

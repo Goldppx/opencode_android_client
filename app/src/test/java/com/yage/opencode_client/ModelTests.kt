@@ -269,6 +269,11 @@ class ModelTests {
     }
 
     @Test
+    fun `ModelOption shortName returns MiniMax for MiniMax models`() {
+        assertEquals("MiniMax", modelOption("MiniMax M2.5").shortName)
+    }
+
+    @Test
     fun `ModelOption shortName returns first word for unknown models`() {
         assertEquals("DeepSeek", modelOption("DeepSeek V3").shortName)
     }
@@ -360,7 +365,7 @@ class ModelTests {
         assertEquals("tool", toolPart.type)
         assertEquals(2, toolPart.files?.size)
         assertEquals("/path/to/file1", toolPart.files!![0].path)
-        assertEquals("/path/to/file2", toolPart.files!![1].path)
+        assertEquals("/path/to/file2", toolPart.files[1].path)
     }
 
     @Test
@@ -410,7 +415,7 @@ class ModelTests {
         val toolPart = list[0].parts[0]
         assertEquals(1, toolPart.files?.size)
         assertEquals("/a/b", toolPart.files!![0].path)
-        assertEquals(1, toolPart.files!![0].additions)
-        assertEquals(0, toolPart.files!![0].deletions)
+        assertEquals(1, toolPart.files[0].additions)
+        assertEquals(0, toolPart.files[0].deletions)
     }
 }

@@ -1,7 +1,6 @@
 package com.yage.opencode_client.ui.settings
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -162,7 +161,7 @@ internal fun AppearanceSection(
 ) {
     SectionHeader(title = "Appearance")
 
-    ThemeMode.values().forEach { mode ->
+    ThemeMode.entries.forEach { mode ->
         Row(
             modifier = Modifier
                 .fillMaxWidth()
